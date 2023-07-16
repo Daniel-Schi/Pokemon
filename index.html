@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="templates.js"></script>
+    <script src="types.js"></script>
+    <script src="pokemonCard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+    
+</head>
+
+<body onload="loadPokemon()">
+    <header class="header">
+        <div class="headerName">Pokedex</div>
+        <div class="inputBox">
+            <input id="search" class="search" type="text" oninput="searchPokemon()"
+                onfocus="this.placeholder = 'search a Pokemon...'"
+                onblur="this.placeholder ='', this.value.defaultValue" placeholder>
+        </div>
+    </header>
+    <div id="pokemonOverlay" class="pokemonOverlay d-none" onclick="pokemonCard(event)"></div>
+    <div id="pokemonsOverview" class="pokemonsOverview">  
+    </div>
+    <div class="loadMorePokemonsbutton">
+        <button id="loadMorePokemons" class="renderMorePokemonsBtn" onclick="loadMorePokemons()">Load More
+            Pokemons</button>
+    </div>
+</body>
+
+</html>
